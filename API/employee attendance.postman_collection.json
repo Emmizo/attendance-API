@@ -1,0 +1,489 @@
+{
+	"info": {
+		"_postman_id": "044989f5-88e0-4c9b-87fe-f5417ce36fd8",
+		"name": "employee attendance",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7583512"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Kwizera Emmanuel",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "emmizokwizera@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/create-user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"create-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "emmizokwizera@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/create-emp",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"create-emp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update employee",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|ayqDCvohFjR4BuAimaEKHFz7Gtm1C6tZHsGPsdft2d7cd186",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "f_name",
+							"value": "Kazerwa Al",
+							"type": "text"
+						},
+						{
+							"key": "l_name",
+							"value": "Alex",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "emmizokwizera@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "employee_identifier",
+							"value": "1199187383888889",
+							"type": "text"
+						},
+						{
+							"key": "phone_number",
+							"value": "0781883888",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/update-emp",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"update-emp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all employee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/employee",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "forgotPassword",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "started at",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|ayqDCvohFjR4BuAimaEKHFz7Gtm1C6tZHsGPsdft2d7cd186",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "emp_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "started_at",
+							"value": "12:15",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/started_at",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"started_at"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ended at",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|L5jg1kFHI6fWZVhssFb2BYtxOy4MGw1OFbQ07qMf82eb9c37",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "attendant_id",
+							"value": "24",
+							"type": "text"
+						},
+						{
+							"key": "ended_at",
+							"value": "21:45",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/ended_at",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"ended_at"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List of attendance",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|L5jg1kFHI6fWZVhssFb2BYtxOy4MGw1OFbQ07qMf82eb9c37",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/attendance",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"attendance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List of attendance report in PFD",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|L5jg1kFHI6fWZVhssFb2BYtxOy4MGw1OFbQ07qMf82eb9c37",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/attendancePDFReport",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"attendancePDFReport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "report in excel",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/excelReport",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"excelReport"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.14"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "public"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 23 Feb 2024 16:03:43 GMT"
+						},
+						{
+							"key": "Last-Modified",
+							"value": "Fri, 23 Feb 2024 16:03:43 GMT"
+						},
+						{
+							"key": "Content-Disposition",
+							"value": "attachment; filename=attendance.xlsx"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+						},
+						{
+							"key": "Content-Length",
+							"value": "6156"
+						},
+						{
+							"key": "Accept-Ranges",
+							"value": "bytes"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "56"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "PK\u0003\u0004\u0014\u0000\u0000\b\b\u0000u�WXG�D�Z\u0001\u0000\u0000�\u0004\u0000\u0000\u0013\u0000\u0004\u0000[Content_Types].xmlSV\u0000\u0000���N�0\u0010E�|E�-J��@\b5��\u0012*Q>`�'�UǶl���L����@�nbE�gr=��tW�d�>(k\n6�r��\u0011V*�,���)�cI�`$hk�`{\fl:�\u001a/�\u000eCBb\u0013\nV���9\u000f��\u001aBf\u001d\u001a�RZ_C�W��\u000e�\n��o���\u000bk\"���ƃM�/��Jb2\u0007\u001f��&\f�i\u001e�\r��(#?�\n<t]0pN+\u0001�\n�\u001b#QS[�J��b]�$km�\u001b\u0017~\u0012\u0018�^c\u0018�\n�#�P!�Zg��<�\u0012�:&�;r�2���y�C�\u0019)�=�R����C�u��A�~�aK��\u0013���ջ��K�ެY\r��\u001d:��޺�\t5�\u0000l��(SG���:�^��\u001eχ\u001f��Q��xH��&�v\u0019>X?c���k�*�(_�����}�>���\u000bk�\u0001PK\u0003\u0004\u0014\u0000\u0000\b\b\u0000u�WX\u0017�78�\u0000\u0000\u0000K\u0002\u0000\u0000\u000b\u0000\u0004\u0000_rels/.relsSV\u0000\u0000���j�0\f��{\n�{���1F�^ʠ�2�\u0007�l�$���-}�y��\u0005��Î��O��v�y\u001a�;�؋Ӱ.JP��޵\u001a^��\u0003���Y\u001aű�3G�Ww�g\u001e)���>�\fqQC��D���b!�]�i$L��3���\f�2n��\u001e�o\u0006T\u000b�:Z\r�h����[��4�ი��]��\u0002yN�,ە\u000f�>�>\u000f�j\n-'\rV�)�#��EF\u0003^6��n���8q\"K��H��>_\u0019ׄ����eƏ�<⇄�Ud�v��\rT�PK\u0003\u0004\u0014\u0000\u0000\b\b\u0000u�WX�$�V�\u0000\u0000\u0000�\u0002\u0000\u0000\u001a\u0000\u0004\u0000xl/_rels/workbook.xml.relsSV\u0000\u0000���j�0\u0010D��\n��ZvZJ)�s)�\\[�\u0003���LlIh7m��U\u001bH\u001c\b�\u0007�Ĭؙ�H���8�OL�\u0007��*J\u0010�M���\u0014|4��g\u0010��[=\u0004�\n&$��w�7\u001c4�\u001dr}$�M<)p��EJ2\u000eGME���M\u001bҨ9��ɨ�^w(We�$��\u0003�\u000bO��\n��V �)��C��\u0006_�9���J�$���/\u001a�:d\u0005G]d\u001f���WK�s��s��<\u000e�[\f\u000f�V�tB��)?���\u0016��0_!��!�\u0019�4�E�ǩ\u0019y���\u001fPK\u0003\u0004\u0014\u0000\u0000\b\b\u0000u�WXad���\u0001\u0000\u0000E\u0003\u0000\u0000\u0010\u0000\u0004\u0000docProps/app.xmlSV\u0000\u0000�SAn�0\u0010��\u0015\u0002�1e�(\n�b�:-rhP\u0003v��ZYD(��n\u0004��/%Ê��T�fg\u0007��T���\u0015=&��Wb�(E�ބ��C%\u001e��o>��\u0018|\r.x��\tI��\u000fj�B��\u0016��\u000e�*�2ǵ�dZ�\u0016��s�\t�\u0003�e:��4��]0/\u001dz����$���k�o�d(Ύ��״\u000ef�GO�S�~Z}��Y\u0003�\u000f�\u001f�I�B�ŷ�A�伩��\u000e�K�|ҥ��R�\f8�dc݀#T�P�\b�̶`\u0013i��G�!\u0015d�䩭D�\u001b\b�8��!Y�,βs1b\u0017���\u0015�3��LJN�\b��9�\u001f�r\u0014dp-�S���#�-;���\u0016\u0012��x9O\n    <f\u0010�e|\u0013��?���E�y�rB\u000f�ဃvB?��Ǹ\u000fw�x\u0019�5�v-$��L�0\u0011�>�M.���É�멤M\u000b�����mcx1O�_���E���P.���\u001f@�\u0005PK\u0003\u0004\u0014\u0000\u0000\b\b\u0000u�WXt���r\u0001\u0000\u0000\u0011\u0003\u0000\u0000\u0011\u0000\u0004\u0000docProps/core.xmlSV\u0000\u0000���N�0\u0010D�|E�+J�$\b�(\r\u0012E=��D\u0011\\�����m�\u000b!��i\u000b�8E�\u0019?�\\]�M�\t�+��$�1��\u0016F*�����2�\"�G�%o��9������\u0012�\u0014���3\u0016\u001c*�I\u0000i_\n;'\u001bD[R��\u0006Z�g!���f\\�1H����-_\u0003�\u0019��- �\u001c9\u001d����d��bB�\u000f�D�\u0014\u0014\u001ahA���,��,�k��\u0007�s�l\u0015�\u0016����)���\u0014�n�\u00151\u001a������c\\5Uz�J\u0000�+)Jဣq���j��d1�\u001eyC�\r�x\u001f\u001aS o���ߑj��\u0001����q���\\,nWKR�,�HY���*�,YQ^\u0014猕�\rc�@\u000e�vw���{J�\u0002\u00156\u0010V�_�<�p��\u001b\u0000�u��\u0010���S\u0016�s��u�#h���\u000e\u0002Gs\u0012��-��q�ױ��\u001a^j�om\\?Z?��+��\u0001PK\u0003\u0004\u0014\u0000\u0000\b\b\u0000u�WXs�{Y�\u0005\u0000\u0000�\u001b\u0000\u0000\u0013\u0000\u0004\u0000xl/theme/theme1.xmlSV\u0000\u0000�YOo�6\u0014��S\u0010���l)u�:E��햦\r\u0012�C��DK�)Q 餾\r�q��aݰˀ�v\u0018�\u0015h�]�O����\u0001�\n{�c���4i3lC�-������Q�z�A��!\u0011��c9�\u001b\u0016\"��\u0003��\u001d��pp�m!�p\u0012`�\u0013ұfDZ�6?��7TDb��<�\u001b�cEJ�\u001b�-}���2OI\u0002kc.b�`(B;\u0010�\b���n6\u001akv�ib�\u0004����xL}��\u0019Kksμ��+Q2��8�s�:E�\r&N�#g��\u0004:Ĭc���\u001f\r�\u0003e!�������?��y�^\u00101UC��\r�OIW\u0012\u0004�fN'�т�\u0019��W�\u0017��\u0005�U\\�����\u0005�\u001c�}\u001f,uV���t�\n        <5P�ʻ��\u001an\u0015��o��׻ݮ�^���xw\u0005�n��[�\n�]�U��[��Z\u0005�-�k+����5���A\u0011��d\u0005��s\u0011�\u0005d��\r#�\r��|\u0003,Q���\n�D���\u0018��b\u0000�<�X�\u0004�YJ��\u0007\\\u000f�#Aq&\u0000o\u0010��\u0014S�\\��d!�\u000b����Q�!#��W�x��)z�����g�\u000f>~����O\u0006�\u001b8\tu�}��7��?�~���f�����鯿|a\u0006*\u001d��'�?{��������\u0001�%�H�\u000fiL$�E��>��6�\u00002\u0012�\u0018F�V(p\u0004H\u0003���\n��\f3\u0013�K�λ+�\u0000��ק�+�\u001eDb��\u0001�\u0013�\u0015�.�˅ќ�L�n�4\t���T��c|h��;\u0011��4��LM,{\u0011���� �8$\tQ([�\u0013B\fd�(��u���K>V�\u001eE]L�.\u0019ґ2\u0013ݠ1�efR\u0010B]���]����~�\u001cV��\u0010��X\u0012Vq�u\n            <U86j�c�#ob\u0015��<�\t��p� �!a\u001c�\u0003\"��涘U���P��a�e���\u0014�NLț�s\u001d��'�\bǩQg�D:�C9�-��\u001eWF%x5C�1�\u0001'��K�:_Zߡad� ��T�R��j>��\u0018����J\u001d�䴲�(���e{\u000e߂C̔<'�u\u001d�X���4�#�\u0015�+��\n�.V�\\����,Ŷ�k�l���{L\u0019;P3Fnʼ�K0/\u0018�d>ȉ\u0016}~\u001a�c)��\u000b\u0005Ο���c���\b� ��%��d\u001dJ�r\t�\u000b��w~E�`s>���j�\u0007�tK�o.��P�Z\u0019��\nk]y;aN\u0001<�4�3K�N�fkބ�A8{��5\u000bѰQ0#A����\n                <,\u0017\u001e\"\u0019န1r��8�3���z�i��[o'�,A�Ź5�\u000b�Rc%J�j:��:BG����,��c����8\u0005~2+U��I��Ui�k�����m�4j\r��H�T�XF\u0005U�4\u001d�,�ozn懋1�P�ΦE����Z�'CK�c⫚��\\�SE�A\u0014\u001c�\u0011��}\fz���\n����9\u001f\b�P��x��/���k�2;0K#\\֤�\u0016�\u0002�?/t�G�zv��ohJ�\u0002M��]S��\u000b\rn+ȯ^�\u0006\b��=ڱ�P\u0011�*�F�\u001f\bh\u001crY�\u0017���TB,{���J\u000e�u��Q\u0014�0R�4D�B�S� dO�v�������9���,ԕi�;\"��\r��]��P4�&�#r�ɠ٦�\u001a���p���t>��\u0007KA�yz\u0011W+��Q��v*��m�-nzg>jS����\u000b\n7\u0015>[��C�\u000f�G��\u0012�F��.�o19\u0002�ۚq\u0019���Z��]\u0013�l>5g�j�}��7w�g�w����\u0014���L>Z�3����m�\u001fM���{�\u0007p)����\u0000>��t�oPK\u0003\u0004\u0014\u0000\u0000\b\b\u0000u�WXx\u001f\u0011�\u0000\u0000\u0000�\u0000\u0000\u0000\u0014\u0000\u0004\u0000xl/sharedStrings.xmlSV\u0000\u0000\r�A\u000e� \u0010@ѽ� ���\u000bcLi\u0017&�@\u000f@�XH�@����e������6���1���`@!-�GZ-����\u0015\u0014�#�Lh�\f�t\u0018�E���B\u0010)7�y\t�\u001c\u000f� uy皜����R�y\u000e��6}6梓�\u0004�Q�\u001b�s#�`@OPK\u0003\u0004\u0014\u0000\u0000\b\b\u0000u�WX=�%\u001d�\u0001\u0000\u0000�\u0003\u0000\u0000\r\u0000\u0004\u0000xl/styles.xmlSV\u0000\u0000�SM��0\f��W\u0018߻N\u0006Z�%��\u0016\u0002=t)�\u0014zub%c�/le���׎3�\f��\\��$=ɲR=]�\"g�AZS��\u0004Lo�4cM\u001d���(\tȍ��\u001a��\f�>5婢���\u0013\u0000���\u0018\u001c��y\b��@\u0013iBMO�П@��`\u001d��\u0019��\u001c��G\u0016b\u000e\u0017!)i�\u000eE�i.\rm*3�Vc ��\fִ���\u0006k6���h����ZC�\u000e\u0007��\u000f�)c\u0013���f�,��[e=�cWӶ-�/ц�U�\u001bW��2�,\u0017^�\u0010ېJ��:�L4���M\u001b\r����`k���D������.a9b��z\u0011\u001fo?�L5��\u0001c���)�h\u001dKND�#\u0010���p�$�\u0019+��=(��^��p�}\u0019H~��\"\r���_alh�Y&\u001bI���_�^�ג����'�95�6oH��'݁o�%��D����hl�\u0017%G��hlms7���o,I�Q��TM��\u001e�$\u0015J��\u0014���\f�{����S�\"`���㍪�����L�Q?���\u001a��-t�i����?PK\u0003\u0004\u0014\u0000\u0000\b\b\u0000u�WXJY(ȫ\u0001\u0000\u0000�\u0002\u0000\u0000\u000f\u0000\u0004\u0000xl/workbook.xmlSV\u0000\u0000�R�N�@\u0010}�WX�^l\u0010�6��T \u0014�\u0017TRx���x�޴�N����:i)O�e�������ɚj��ɻV\u001d\u001e4�B�}G�U�Wˏ�T�\t\\\u0007�;l�3�:[|�o}|\\{�XI��\u0003h񅈌q�*��[5�\u0014fu�z@\u000b|�\u0003:��>ZH\u0002�C͒\u0003\u001d\u000f�ɚ��iNk\u000b�v\u0015f�=5|ߓ�\u000b�G�.ME\"\u001aH�\u0012\u000f\u0014X-�=\u0019���� �\u001f`e�'�*\u0003�.;Jص�X���D\u001c×�L\u0006'͉�\u00177����S��@|�s�l�\b��/>�\nt�\r�`�*Q\u001a��d\u0012�\u000bHx\u0015�\u0018��)�\"bO��m��\u0004[rd�%�Ճa\t��o��H/�%0�:zc���Wr�\u0017�&E�D�mx���,X�N\u001b�!�5\u0019Jϭ*o�y���Z�f{[��BV���J̵�z(\u001a�H\u001e�;.E��\u001d���\u0002��2�Κ��y�˧\n�.:�*�5�so��r\"\u0019�\u001f�9\u0017����a�(�����L�?��\u000fPK\u0003\u0004\u0014\u0000\u0000\b\b\u0000u�WX��7\u0006�\u0002\u0000\u0000�\u0005\u0000\u0000\u0018\u0000\u0004\u0000xl/worksheets/sheet1.xmlSV\u0000\u0000�T�R�0\u0010}�Wh�N���B&\tC�)��\t\u0003�<+��� K���\u0003_ߕ|�\u0019��'��{���J��}��\u000e�W�,�l2�\fLj�2���~\\�|�̣0Rhk`�_���ՇEcݳ/\u0000�\u0011��W\"�d����\u0001\u000fA㗼@��I��\u0002J�'�\u0002C�̺R �.O<�\b\u0019�J�|�N�$�P�C��c0l��\u0014�lZ�`�\u0005q�\u0005�&_���h{y\u0014�t�!�=�\u0011ū63��N��*u��\f'�-;j�U�%g\u0007:��q@�O�?c*�ct��=��\t�U4���\n_\"\u0016ge:�ɍub��\u001cI�HG\"�{��e\u0012�j\u0011cwn��5je��1_�D��;h����>p��\u0002C Y-��N*:۰��A��\u0017��E�#��GA�G6C�}\u0000\r)���a[��>��\r�h�}a��N�[bC����6xo�K��I\b݊PM�\u0011+4\u0017���%h\u001d8P�ߎ�\u001b��cl����$H��L�\u001a��5tZO'��u���\u001d��0��a�X�X/�J� �r�ঊ���7A�О\u0014\r�\u0007�Ne(\u00129�\u0012.WT�!��t�3�҉6�*Z�9�ZD[�^\u0011'\u0013�O�e�b�t�Ԩ�X%*p\u000f�\u0015���St3�\\�N?\r/\u0015a�fS\u0012�)|��<:�II,�\u001b�7.���1�\u0005�\r�Z�g�g\u001d�0��\f\u001c��H�c\u0007f�ÐX+�q\bG\nO\n\u000bz=�%\u0010Z�&ĺ\tuq�])۵��\u001d�d���poӑ����\u0013�`�d��Pr�Eg(:��\u0003X-0\\�;�г��\u0006��I�\u0007{�\u000fPK\u0003\u0004\u0014\u0000\u0000\b\b\u0000u�WX�KR\"x\u0000\u0000\u0000�\u0000\u0000\u0000#\u0000\u0004\u0000xl/worksheets/_rels/sheet1.xml.relsSV\u0000\u0000M�1\u000e\u0002!\u0010\u0000{_A��@\u000bc�q��\u0000�\u000f�p+\u0010a!,1�{)-'��y����$\u0016�p�\f(bW�����~ݟAIG�0\u0015&\u000b_\u0012X��|��}4\u0012b\u00155&,\u0016B�����@\u0019e*�x�gi\u0019���uE�BO�h�I��\u0007��\u0007PK\u0001\u0002\u0003\u0006\u0014\u0000\u0000\b\b\u0000u�WXG�D�Z\u0001\u0000\u0000�\u0004\u0000\u0000\u0013\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000 \u0000\u0000\u0000\u0000\u0000\u0000\u0000[Content_Types].xmlPK\u0001\u0002\u0003\u0006\u0014\u0000\u0000\b\b\u0000u�WX\u0017�78�\u0000\u0000\u0000K\u0002\u0000\u0000\u000b\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000 \u0000\u0000\u0000�\u0001\u0000\u0000_rels/.relsPK\u0001\u0002\u0003\u0006\u0014\u0000\u0000\b\b\u0000u�WX�$�V�\u0000\u0000\u0000�\u0002\u0000\u0000\u001a\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000 \u0000\u0000\u0000�\u0002\u0000\u0000xl/_rels/workbook.xml.relsPK\u0001\u0002\u0003\u0006\u0014\u0000\u0000\b\b\u0000u�WXad���\u0001\u0000\u0000E\u0003\u0000\u0000\u0010\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000 \u0000\u0000\u0000�\u0003\u0000\u0000docProps/app.xmlPK\u0001\u0002\u0003\u0006\u0014\u0000\u0000\b\b\u0000u�WXt���r\u0001\u0000\u0000\u0011\u0003\u0000\u0000\u0011\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000 \u0000\u0000\u0000�\u0005\u0000\u0000docProps/core.xmlPK\u0001\u0002\u0003\u0006\u0014\u0000\u0000\b\b\u0000u�WXs�{Y�\u0005\u0000\u0000�\u001b\u0000\u0000\u0013\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000 \u0000\u0000\u0000'\u0007\u0000\u0000xl/theme/theme1.xmlPK\u0001\u0002\u0003\u0006\u0014\u0000\u0000\b\b\u0000u�WXx\u001f\u0011�\u0000\u0000\u0000�\u0000\u0000\u0000\u0014\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000 \u0000\u0000\u0000\u0017\r\u0000\u0000xl/sharedStrings.xmlPK\u0001\u0002\u0003\u0006\u0014\u0000\u0000\b\b\u0000u�WX=�%\u001d�\u0001\u0000\u0000�\u0003\u0000\u0000\r\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000 \u0000\u0000\u0000�\r\u0000\u0000xl/styles.xmlPK\u0001\u0002\u0003\u0006\u0014\u0000\u0000\b\b\u0000u�WXJY(ȫ\u0001\u0000\u0000�\u0002\u0000\u0000\u000f\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000 \u0000\u0000\u0000�\u000f\u0000\u0000xl/workbook.xmlPK\u0001\u0002\u0003\u0006\u0014\u0000\u0000\b\b\u0000u�WX��7\u0006�\u0002\u0000\u0000�\u0005\u0000\u0000\u0018\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000 \u0000\u0000\u0000�\u0011\u0000\u0000xl/worksheets/sheet1.xmlPK\u0001\u0002\u0003\u0006\u0014\u0000\u0000\b\b\u0000u�WX�KR\"x\u0000\u0000\u0000�\u0000\u0000\u0000#\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000 \u0000\u0000\u0000h\u0014\u0000\u0000xl/worksheets/_rels/sheet1.xml.relsPK\u0005\u0006\u0000\u0000\u0000\u0000\u000b\u0000\u000b\u0000�\u0002\u0000\u0000%\u0015\u0000\u0000\u0000\u0000"
+				}
+			]
+		}
+	]
+}
